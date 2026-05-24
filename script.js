@@ -2,23 +2,21 @@ const scaryImage = document.getElementById("scaryImage");
 const scarySound = document.getElementById("scarySound");
 const candleImage = document.getElementById("candleImage");
 
-// tạo div đếm ngược
+// tạo countdown
 const countdownText = document.createElement("div");
 
 countdownText.classList.add("countdown");
 
-// ẨN BAN ĐẦU
-countdownText.style.display = "none";
-
 document.body.appendChild(countdownText);
 
-function blowCandle() {
+function blowCandle(){
 
-  candleImage.src = "./style/Candle-Off.png";
+  // đổi ảnh nến
+  candleImage.src = "./Candle-Off.png";
 
   let count = 3;
 
-  // hiện số 3
+  // hiện countdown
   countdownText.style.display = "block";
   countdownText.innerHTML = count;
 
@@ -26,20 +24,22 @@ function blowCandle() {
 
     count--;
 
-    if (count > 0) {
+    if(count > 0){
 
       countdownText.innerHTML = count;
 
-    } else {
+    }else{
 
       clearInterval(timer);
 
       countdownText.style.display = "none";
 
+      // hiện jumpscare
       scaryImage.style.display = "block";
 
+      // phát âm thanh
       scarySound.play();
     }
 
-  }, 1000);
+  },1000);
 }
