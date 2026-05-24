@@ -2,10 +2,13 @@ const scaryImage = document.getElementById("scaryImage");
 const scarySound = document.getElementById("scarySound");
 const candleImage = document.getElementById("candleImage");
 
-// tạo text đếm ngược
+// tạo div đếm ngược
 const countdownText = document.createElement("div");
 
 countdownText.classList.add("countdown");
+
+// ẨN BAN ĐẦU
+countdownText.style.display = "none";
 
 document.body.appendChild(countdownText);
 
@@ -15,8 +18,9 @@ function blowCandle() {
 
   let count = 3;
 
+  // hiện số 3
   countdownText.style.display = "block";
-  countdownText.innerText = count;
+  countdownText.innerHTML = count;
 
   const timer = setInterval(() => {
 
@@ -24,7 +28,7 @@ function blowCandle() {
 
     if (count > 0) {
 
-      countdownText.innerText = count;
+      countdownText.innerHTML = count;
 
     } else {
 
