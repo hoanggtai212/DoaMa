@@ -4,38 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Screaming in fear</title>
+
   <link rel="stylesheet" href="./style/style.css">
 </head>
-<style>
-  .fog {
-    position: absolute;
-    top: -100px;
-    left: -100px;
-    width: 100%;
-    height: 100%;
-    background: url('./style/Eyes.jpg') repeat;
-    opacity: 0.1;
-    animation: drift 20s linear infinite;
-    pointer-events: none;
-    z-index: 0;
-    filter: blur(1.5px);
-  }
-</style>
+
 <body>
+
   <div class="fog"></div>
-  <div class="content">Screaming in fear...</div>
-  
-  <div class="candle">
-    <img id="candleImage" src="./style/Candle-On.png" alt="Candle">
-    <button class="btn" onclick="blowCandle()">
-  Ấn Vô Đây  ...<br>
-  ( Be careful : You should lower the volume )
-</button>
+
+  <div class="content">
+    Screaming in fear...
   </div>
-  <img id="scaryImage" src="./style/hq720.jpg" alt="Scary Fullscreen Image">
-  <audio id="scarySound" src="./style/Scary Woman Screaming - Sound Effect (HD).mp3" preload="auto"></audio>
+
+  <div class="candle">
+
+    <img id="candleImage"
+         src="./style/Candle-On.png"
+         alt="Candle">
+
+    <button class="btn" onclick="blowCandle()">
+      Ấn Vô Đây ...<br>
+      ( Be careful : You should lower the volume )
+    </button>
+
+  </div>
+
+  <img id="scaryImage"
+       src="./style/hq720.jpg"
+       alt="Scary Image">
+
+  <audio id="scarySound"
+         src="./style/Scary Woman Screaming - Sound Effect (HD).mp3">
+  </audio>
 
   <script src="./style/script.js"></script>
+
 </body>
 </html>
-
